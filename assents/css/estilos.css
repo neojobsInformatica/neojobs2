@@ -1,0 +1,327 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: "Nunito Sans", serif;
+}
+
+/*DIVs FLEX*/
+article, header, .menu, .home, .frases, main, .sobre, .empresa, .assistencia, .container, .tipo, .manutencao, .feedbacks, .container-trocas, .feed, .indicadores, .orcamento, .orcamento-interno, .canal, footer, .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*CANAL FLUTUANTE*/
+article{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(15px);
+    z-index: +2;
+    display: none;
+}
+#fechar{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+#fechar:hover{
+    padding: 5px;
+    background-color: rgba(240, 248, 255, 0.253);
+}
+
+header{
+    content: '';
+    background-image: url(../imagens/back.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+}
+.menu{
+    background-color: #18181863;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 90px;
+    justify-content: space-around;
+    z-index: +1;
+    opacity: 0;
+}
+.menu img, .logo-canal{
+    height: 70px;
+}
+.menu a{
+    padding: 7px 15px;
+    background-color: #E47124;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+}
+.menu a:hover{
+    background-color: #E34F24;
+}
+.home{
+    gap: 100px;
+}
+.frases{
+    flex-direction: column;
+    align-items: start;
+    max-width: 650px;
+    gap: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+}
+.frases h1{
+    font-family: "Montserrat", serif;
+    font-size: 40px;
+}
+.frases p{
+    font-size: 25px;
+}
+.frases a, .orcamento-interno a{
+    padding: 10px 20px;
+    border: 1px solid #E47124;
+    border-radius: 5px;
+    transition: all 0.5s ease-in;
+}
+.frases a:hover, .orcamento-interno a:hover{
+    background-color: #E47124;
+}
+.home-img{
+    height: 350px;
+    border-radius: 20px;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+main{
+    flex-direction: column;
+}
+
+/*SOBRE*/
+.sobre{
+    gap: 100px;
+    padding: 50px 0px;
+}
+.sobre img{
+    height: 600px;
+    width: 600px;
+    border-radius: 20px;
+}
+.empresa{
+    align-items: start;
+    width: 700px;
+    flex-direction: column;
+    gap: 10px;
+}
+.empresa h1{
+    color: #181818;
+    font-family: "Montserrat", serif;
+    font-size: 40px;
+}
+.empresa p{
+    color: #181818;
+    font-size: 20px;
+}
+
+/*ASSISTENCIA TECNOLÓGICA*/
+.assistencia, .manutencao{
+    padding: 50px 0px ;
+    width: 100%;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    gap: 50px;
+}
+.title{
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color:#E34F24;
+    border-radius: 20px;
+    font-weight: 300;
+}
+.container{
+    gap: 50px 100px;
+    flex-wrap: wrap;
+}
+.tipo{
+    width: 650px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: start;
+}
+.imagem-assis{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 45px;
+}
+.imagem-assis img{
+    height: 70px;
+    background-color: white;
+    border-radius: 5px;
+}
+.tipo h1{
+    color:#181818;
+    position: relative;
+    bottom: 30px;
+    font-size: 30px;
+}
+.tipo p{
+    color:#181818;
+    position: relative;
+    bottom: 30px;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*FEEDBACKS*/
+.feedbacks{
+    flex-direction: column;
+    padding: 50px 0px;
+    background-color: #181818;
+    width: 100%;
+    height: 550px;
+}
+.feed{
+    max-width: 900px;
+    height: 200px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: start;
+}
+.feed h1{
+    font-size: 35px;
+}
+.feed p{
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+}
+.container-trocas{
+    padding: 0px 50px;
+    gap: 100px;
+}
+.trocas{
+    height: 40px;
+    width: 40px;
+}
+.trocas img{
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+}
+.trocas img:hover{
+    filter: drop-shadow(0px 0px 5px rgb(228, 113, 36));
+}
+.indicadores{
+    gap: 30px;
+}
+.b1, .b2, .b3, .b4, .b5{
+    height: 17px;
+    width: 17px;
+    background-color:aliceblue;
+    border-radius: 50%;
+}
+#se1, #se2, #se3, #se4, #sd2, #sd3, #sd4{
+    display: none;
+}
+#two, #three, #four, #five{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.b2, .b3, .b4, .b5{
+    background-color:#E39224;
+}
+
+/*ORÇAMENTO*/
+.orcamento{
+    background-color: #141414;
+    width:100%;
+    padding: 100px 0px;
+}
+.orcamento-interno{
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.orcamento-interno h1{
+    font-size: 35px;
+}
+.orcamento-interno p{
+    font-size: 20px;
+}
+
+/*CANAL DE OFERTAS*/
+.canal{
+    content: '';
+    background-image: url(../imagens/cpu.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-color: aliceblue;
+    padding: 50px 0px;
+    flex-direction: column;
+    gap: 15px;
+}
+.canal p, .canal h1, .canal span{ 
+    font-size: 20px;
+    max-width: 850px;
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+.canal h1, .canal span{
+    font-size: 35px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+}
+.canal span{
+    color: #E47124;
+    border-bottom: 1px solid #E47124;
+}
+.canal a{
+    padding: 7px 18px;
+    background-image: linear-gradient(to top, #E39224, #E34F24);
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+.canal a:hover{
+    background-image: linear-gradient(to top, transparent, transparent);
+    border: 1px solid #E47124;
+}
+
+/*RODAPÉ*/
+footer{
+    background-color: aliceblue;
+    height: 150px;
+    justify-content: space-around;
+}
+.logo-footer{
+    height: 80px;
+}
+.copy{
+    text-align: center;
+}
+.copy p{
+    color: #181818;
+    font-size: 18px;
+}
+.redes{
+    gap: 15px;
+}
+.redes img{
+    height: 40px;
+}
+.redes img:hover{
+    border: 2px solid transparent;
+}
