@@ -9,14 +9,14 @@
 }
 
 /*DIVs FLEX*/
-article, header, .menu, .home, .frases, main, .sobre, .empresa, .assistencia, .container, .tipo, .manutencao, .feedbacks, .container-trocas, .feed, .indicadores, .orcamento, .orcamento-interno, .canal, footer, .redes{
+article, header, .menu, .home, .frases, main, .sobre, .empresa, .assistencia, .container, .tipo, .manutencao, .feedbacks, .container-trocas, .feed, .indicadores, .orcamento, .orcamento-interno, .canal, footer, .rodape, .redes{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /*CANAL FLUTUANTE*/
-article{
+#canal{
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -24,7 +24,7 @@ article{
     z-index: +2;
     display: none;
 }
-#fechar{
+#fechar-c, #fechar-m{
     position: absolute;
     top: 50px;
     right: 50px;
@@ -33,11 +33,35 @@ article{
     border-radius: 50%;
     transition: all 1s ease;
 }
-#fechar:hover{
+#fechar-c:hover, #fechar-m:hover{
     padding: 5px;
     background-color: rgba(240, 248, 255, 0.253);
 }
 
+/*MENU-HAMBURGUER*/
+#menu-open{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    backdrop-filter: blur(15px);
+    z-index: +1;
+    background-color: #18181844;
+    flex-direction: column;
+    gap: 25px;
+    display: none;
+
+    & a{
+        font-size: 25px;
+        padding: 5px 50px;
+        transition: all 1s;
+        border-radius: 10px;
+        &:hover{
+            background-image: linear-gradient(to right, #E47124, #E34F24);
+        }
+    }
+}
+
+/*HOME*/
 header{
     content: '';
     background-image: url(../imagens/back.jpg);
@@ -47,26 +71,23 @@ header{
     flex-direction: column;
 }
 .menu{
-    background-color: #18181863;
-    position: fixed;
+    backdrop-filter: blur(10px);
+    position: absolute;
     top: 0px;
     width: 100%;
     height: 90px;
-    justify-content: space-around;
-    z-index: +1;
+    justify-content: space-between;
     opacity: 0;
-}
-.menu img, .logo-canal{
-    height: 70px;
-}
-.menu a{
-    padding: 7px 15px;
-    background-color: #E47124;
-    border-radius: 5px;
-    transition: all 0.5s ease-in;
-}
-.menu a:hover{
-    background-color: #E34F24;
+
+    & .logo{
+       height: 70px;
+       margin-left: 150px;
+    }
+    & .menu-h{
+        height: 40px;
+        cursor: pointer;
+        margin-right: 150px;
+    }
 }
 .home{
     gap: 100px;
@@ -78,22 +99,26 @@ header{
     gap: 10px;
     transform: translateY(50px);
     opacity: 0;
-}
-.frases h1{
-    font-family: "Montserrat", serif;
-    font-size: 40px;
-}
-.frases p{
-    font-size: 25px;
-}
-.frases a, .orcamento-interno a{
-    padding: 10px 20px;
-    border: 1px solid #E47124;
-    border-radius: 5px;
-    transition: all 0.5s ease-in;
-}
-.frases a:hover, .orcamento-interno a:hover{
-    background-color: #E47124;
+
+    & h1, span{
+        font-family: "Montserrat", serif;
+        font-size: 40px;
+    }
+    & span{
+        color: #E47124;
+    }
+    & p{
+        font-size: 25px;
+    }
+    & a{
+        padding: 10px 20px;
+        border: 1px solid #E47124;
+        border-radius: 5px;
+        transition: all 0.5s ease-in;
+        &:hover{
+            background-color: #E47124;
+        }
+    }
 }
 .home-img{
     height: 350px;
@@ -108,41 +133,66 @@ main{
 
 /*SOBRE*/
 .sobre{
+    background-color: #eff0f3;
+    width: 100%;
     gap: 100px;
     padding: 50px 0px;
 }
-.sobre img{
-    height: 600px;
-    width: 600px;
+.sobre-imagem{
+    height: 550px;
+    width: 550px;
     border-radius: 20px;
+    animation: movimento 5s alternate infinite;
 }
 .empresa{
     align-items: start;
     width: 700px;
     flex-direction: column;
     gap: 10px;
-}
-.empresa h1{
-    color: #181818;
-    font-family: "Montserrat", serif;
-    font-size: 40px;
-}
-.empresa p{
-    color: #181818;
-    font-size: 20px;
+
+    & img{
+        height: 100px;
+        width: 100px;
+        animation: iluminacao 5s infinite alternate;
+    }
+    & h1{
+        color: #E47124;
+        font-family: "Montserrat", serif;
+        font-size: 40px;
+    }
+    & p{
+        color: #181818;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1.4px;
+    }
 }
 
 /*ASSISTENCIA TECNOLÓGICA*/
 .assistencia, .manutencao{
-    padding: 50px 0px ;
+    padding: 50px 0px;
     width: 100%;
     flex-direction: column;
-    background-color: #f5f5f5;
+    background-color: #181818;
     gap: 50px;
+    border-bottom: 1px solid #E47124;
+
+    & a{
+        padding: 7px 20px;
+        font-size: 20px;
+        color: #181818;
+        background-color: #E47124;
+        border-radius: 5px 15px;
+        transition: all 1s ;
+        &:hover{
+            border-radius: 3px 15px;
+            color: whitesmoke;
+        }
+    }
 }
 .title{
     font-size: 20px;
-    padding: 5px 10px;
+    padding: 10px 20px;
     background-color:#E34F24;
     border-radius: 20px;
     font-weight: 300;
@@ -152,59 +202,66 @@ main{
     flex-wrap: wrap;
 }
 .tipo{
-    width: 650px;
+    width: 600px;
     padding: 20px;
-    background-color: white;
     border-radius: 20px;
     flex-direction: column;
-    align-items: start;
-}
-.imagem-assis{
-    width: 100%;
     text-align: center;
-    position: relative;
-    bottom: 45px;
+    animation: entrada 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% 20%;
+    
+    & img{
+        height: 70px;
+        border-radius: 5px;
+    }
+    & h1{
+        color:whitesmoke;
+        font-size: 30px;
+    }
+    & p{
+        color:whitesmoke;
+        font-weight: 400;
+        font-size: 18px;
+    }
 }
-.imagem-assis img{
-    height: 70px;
-    background-color: white;
-    border-radius: 5px;
-}
-.tipo h1{
-    color:#181818;
-    position: relative;
-    bottom: 30px;
-    font-size: 30px;
-}
-.tipo p{
-    color:#181818;
-    position: relative;
-    bottom: 30px;
-    font-weight: 400;
-    font-size: 18px;
-}
+
 
 /*FEEDBACKS*/
 .feedbacks{
     flex-direction: column;
-    padding: 50px 0px;
-    background-color: #181818;
+    padding: 100px 0px;
+    background-color: #eff0f3;
     width: 100%;
-    height: 550px;
+    height: 100%;
+    gap: 30px;
+    & h1{
+        color: #E47124;
+        font-weight: 500;
+        font-size: 35px;
+        text-align: center;
+    }
 }
 .feed{
     max-width: 900px;
-    height: 200px;
-    gap: 20px;
+    height: 400px;
+    gap: 25px;
     flex-direction: column;
-    align-items: start;
-}
-.feed h1{
-    font-size: 35px;
-}
-.feed p{
-    font-size: 20px;
-    font-family: "Montserrat", serif;
+    text-align: center;
+
+    & img{
+        height: 100px;
+        border-radius: 50%;
+    }
+    & h1{
+        font-size: 35px;
+        color: #181818;
+    }
+    & p{
+        font-size: 20px;
+        font-family: "Montserrat", serif;
+        color: #181818;
+    }
 }
 .container-trocas{
     padding: 0px 50px;
@@ -213,14 +270,15 @@ main{
 .trocas{
     height: 40px;
     width: 40px;
-}
-.trocas img{
-    height: 40px;
-    cursor: pointer;
-    position: absolute;
-}
-.trocas img:hover{
-    filter: drop-shadow(0px 0px 5px rgb(228, 113, 36));
+
+    & img{
+        height: 40px;
+        cursor: pointer;
+        position: absolute;
+        &:hover{
+           filter: drop-shadow(0px 0px 5px rgb(228, 113, 36)); 
+        }
+    }
 }
 .indicadores{
     gap: 30px;
@@ -228,7 +286,7 @@ main{
 .b1, .b2, .b3, .b4, .b5{
     height: 17px;
     width: 17px;
-    background-color:aliceblue;
+    background-color:#E39224;
     border-radius: 50%;
 }
 #se1, #se2, #se3, #se4, #sd2, #sd3, #sd4{
@@ -240,27 +298,10 @@ main{
     opacity: 0;
 }
 .b2, .b3, .b4, .b5{
-    background-color:#E39224;
+    border: 1px solid #E39224;
+    background-color: transparent;
 }
 
-/*ORÇAMENTO*/
-.orcamento{
-    background-color: #141414;
-    width:100%;
-    padding: 100px 0px;
-}
-.orcamento-interno{
-    max-width: 1000px;
-    flex-direction: column;
-    align-items: start;
-    gap: 15px;
-}
-.orcamento-interno h1{
-    font-size: 35px;
-}
-.orcamento-interno p{
-    font-size: 20px;
-}
 
 /*CANAL DE OFERTAS*/
 .canal{
@@ -269,59 +310,87 @@ main{
     background-position: center;
     background-size: cover;
     width: 100%;
-    background-color: aliceblue;
     padding: 50px 0px;
     flex-direction: column;
     gap: 15px;
+
+    & img{
+        height: 70px;
+    }
+    & h1, p, span{
+        font-size: 20px;
+        max-width: 850px;
+        text-align: center;
+        backdrop-filter: blur(2px);
+    }
+    & h1, span{
+        font-size: 35px;
+        font-family: "Montserrat", serif;
+        font-weight: 500;
+    }
+    & span{
+        color: #E47124;
+        border-bottom: 1px solid #E47124;
+    }
+    & a{
+        padding: 7px 18px;
+        background-image: linear-gradient(to top, #E39224, #E34F24);
+        border-radius: 5px;
+        border: 1px solid transparent;
+        &:hover{
+            background-image: linear-gradient(to top, transparent, transparent);
+            border: 1px solid #E47124; 
+        }
+    }
 }
-.canal p, .canal h1, .canal span{ 
-    font-size: 20px;
-    max-width: 850px;
-    text-align: center;
-    backdrop-filter: blur(2px);
-}
-.canal h1, .canal span{
-    font-size: 35px;
-    font-family: "Montserrat", serif;
-    font-weight: 500;
-}
-.canal span{
-    color: #E47124;
-    border-bottom: 1px solid #E47124;
-}
-.canal a{
-    padding: 7px 18px;
-    background-image: linear-gradient(to top, #E39224, #E34F24);
-    border-radius: 5px;
-    border: 1px solid transparent;
-}
-.canal a:hover{
-    background-image: linear-gradient(to top, transparent, transparent);
-    border: 1px solid #E47124;
-}
+
 
 /*RODAPÉ*/
 footer{
-    background-color: aliceblue;
-    height: 150px;
-    justify-content: space-around;
+    background-color: #181818;
+    height: 100%;
+    width: 100%;
+    padding: 50px 0px;
+    flex-direction: column;
+    gap: 30px;
+
+    & hr{
+        width: 100%;
+    }
 }
-.logo-footer{
-    height: 80px;
+.rodape{
+    width: 100%;
+    justify-content:space-around;
+
+    & span{
+        text-align: center;
+        max-width: 250px;
+    }
+    & h1{
+        font-size: 20px;
+    }
+}
+.rodape-empresa{
+    text-align: center;
+    & img{
+        height: 80px;
+    }
+}
+.redes{
+    gap: 20px;
+
+    & img{
+        height: 40px;
+        &:hover{
+            border: 2px solid transparent;
+        }
+    }
 }
 .copy{
     text-align: center;
-}
-.copy p{
-    color: #181818;
-    font-size: 18px;
-}
-.redes{
-    gap: 15px;
-}
-.redes img{
-    height: 40px;
-}
-.redes img:hover{
-    border: 2px solid transparent;
+
+    & p{
+        font-size: 18px;
+        color: #E47124;
+    }
 }
