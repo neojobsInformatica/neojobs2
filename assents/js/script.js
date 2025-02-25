@@ -18,9 +18,10 @@ setTimeout(() => {
     menu.style.opacity = '1'
 }, 2500);
 
+
 /*CANAL DE OFERTAS*/
 let canal = document.querySelector('#canal')
-let fechar = document.querySelector('#fechar')
+let fechar = document.querySelector('#fechar-c')
 fechar.addEventListener('click', fecharCanal)
 
 setTimeout(() => {
@@ -30,6 +31,22 @@ setTimeout(() => {
 function fecharCanal(){
     canal.style.display = 'none'
 }
+
+
+/*MENU HAMBURGUER*/
+let secaoMenu = document.querySelector('#menu-open')
+let menuHamburguer = document.querySelector('.menu-h')
+let fecharMenu = document.querySelector('#fechar-m')
+menuHamburguer.addEventListener('click', abrirMenu)
+fecharMenu.addEventListener('click', fecharM)
+
+function abrirMenu(){
+    secaoMenu.style.display = 'flex'
+}
+function fecharM(){
+    secaoMenu.style.display = 'none'
+}
+
 
 //DIVISÕES
 let One = document.querySelector('#one')
@@ -83,8 +100,9 @@ function mudarA(){
     se1.style.display = 'flex'
 
     //INDICADORES
-    i1.style.backgroundColor = '#E39224' // amarelo
-    i2.style.backgroundColor = 'aliceblue' // branco
+    i1.style.backgroundColor = 'transparent'// saida
+    i1.style.border = '1px solid #E39224' 
+    i2.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarB(){
@@ -106,8 +124,9 @@ function mudarB(){
     se2.style.display = 'flex'
 
     //INDICADORES
-    i2.style.backgroundColor = '#E39224' // amarelo
-    i3.style.backgroundColor = 'aliceblue' // branco
+    i2.style.backgroundColor = 'transparent'// saida
+    i2.style.border = '1px solid #E39224' 
+    i3.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarC(){
@@ -129,8 +148,9 @@ function mudarC(){
     sd4.style.display = 'flex'
 
     //INDICADORES
-    i3.style.backgroundColor = '#E39224' // amarelo
-    i4.style.backgroundColor = 'aliceblue' // branco
+    i3.style.backgroundColor = 'transparent'// saida
+    i3.style.border = '1px solid #E39224' 
+    i4.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarD(){
@@ -151,8 +171,9 @@ function mudarD(){
     se4.style.display = 'flex'
 
     //INDICADORES
-    i4.style.backgroundColor = '#E39224' // amarelo
-    i5.style.backgroundColor = 'aliceblue' // branco
+    i4.style.backgroundColor = 'transparent'// saida
+    i4.style.border = '1px solid #E39224' 
+    i5.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarE(){
@@ -172,8 +193,9 @@ function mudarE(){
     sd1.style.display = 'flex'
 
     //INDICADORES
-    i2.style.backgroundColor = '#E39224' // amarelo
-    i1.style.backgroundColor = 'aliceblue' // branco
+    i2.style.backgroundColor = 'transparent'// saida
+    i2.style.border = '1px solid #E39224' 
+    i1.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarF(){
@@ -194,8 +216,9 @@ function mudarF(){
     sd2.style.display = 'flex'
 
     //INDICADORES
-    i3.style.backgroundColor = '#E39224' // amarelo
-    i2.style.backgroundColor = 'aliceblue' // branco
+    i3.style.backgroundColor = 'transparent'// saida
+    i3.style.border = '1px solid #E39224' 
+    i2.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarG(){
@@ -216,8 +239,9 @@ function mudarG(){
     sd3.style.display = 'flex'
 
     //INDICADORES
-    i4.style.backgroundColor = '#E39224' // amarelo
-    i3.style.backgroundColor = 'aliceblue' // branco
+    i4.style.backgroundColor = 'transparent'// saida
+    i4.style.border = '1px solid #E39224' 
+    i3.style.backgroundColor = '#E39224' // entrada
 }
 
 function mudarH(){
@@ -237,6 +261,7 @@ function mudarH(){
     sd4.style.display = 'flex'
 
     //INDICADORES
-    i5.style.backgroundColor = '#E39224' // amarelo
-    i4.style.backgroundColor = 'aliceblue' // branco
+    i5.style.backgroundColor = 'transparent'// saida
+    i5.style.border = '1px solid #E39224' 
+    i4.style.backgroundColor = '#E39224' // entrada
 }
