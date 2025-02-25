@@ -7,6 +7,7 @@
     <link name="Ian Barbosa">
     <link rel="stylesheet" href="./assents/css/estilos.css">
     <link rel="stylesheet" href="./assents/css/responsivo.css">
+    <link rel="stylesheet" href="./assents/css/animacoes.css">
     <link rel="website icon" type="png" href="./assents/imagens/leao-(sem fundo).png">
     <!--FONTES EXPORTADAS-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
@@ -14,7 +15,7 @@
 <body>
     
     <article id="canal"> 
-        <img src="./assents/imagens/icones/close.svg" alt="fechar" id="fechar">
+        <img src="./assents/imagens/icones/close.svg" alt="fechar" id="fechar-c">
         <section class="canal">
             <img src="./assents/imagens/leao-(sem fundo).png" class="logo-canal" alt="logo">
             <h1>Quer Receber Dicas e Promoções Sobre o <span>Mundo da Tecnologia?!</span></h1>
@@ -23,19 +24,23 @@
         </section> 
     </article>
 
-    <header>
+    <article id="menu-open">
+        <img src="./assents/imagens/icones/close.svg" alt="fechar" id="fechar-m">
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#servico">Serviços</a>
+        <a href="https://wa.me/5521998303003">Contacte-nos</a> 
+    </article>
+
+    <header id="home">
         <nav class="menu">
-            <img src="./assents/imagens/leao-(sem fundo).png" alt="logo">  
-            
+            <img src="./assents/imagens/logo-comnome-sem-fundo.png" alt="logo" class="logo">  
 
-            <h1>Neojobs</h1>
-
-            <a href="https://wa.me/5521998303003">Contate-nos</a>
+            <img src="./assents/imagens/icones/menu.svg" alt="menu-hamburguer" class="menu-h">
         </nav>
 
         <section class="home">
             <div class="frases">
-                <h1>Há 9 Anos Conectando Você ao Futuro da Informática</h1>
+                <h1>Há <span>9 Anos</span> Conectando Você ao Futuro da Informática</h1>
                 <p>Soluções tecnológicas Avançadas: Atendimentos em Itaboraí, São Gonçalo, Niterói e Rio de Janeiro. - Inovação e qualidade garantida</p>
                 <a href="https://wa.me/5521998303003">Solicite um Orçamento</a>
             </div>
@@ -45,64 +50,53 @@
     </header>
 
     <main>
-        <section class="sobre">
-            <img src="./assents/imagens/sobre-imagem.jpg" alt="imagem sobre">
+        <section class="sobre" id="sobre">
+            <img src="./assents//imagens/icone-sobre.png" alt="imagem sobre" class="sobre-imagem">
 
             <div class="empresa">
+                <img src="./assents/imagens/leao-(sem fundo).png" alt="logo neojobs">
                 <h1>Soluções em Manutenção de Computadores Neojobs</h1>
-                <p>Possuimos 9 anos de experiência no mercado, dedicados a fornecer serviços de upgrade, manutenção, limpeza, instalação e montagem de computadores, impressoras e notebooks. Desde a nossa fundação, somos comprometidos a oferecer soluções de alta qualidade para nossos clientes, garantindo que seus dispositivos funcionem com a máxima eficiência e desempenho. Estamos sempre atualizados com as últimas tendências e tecnologias do mercado, garantindo que nossos clientes recebam o melhor suporte possível. Venha conhecer a NeoJobs e descubra como podemos ajudar a manter seus computadores em perfeito estado. Estamos aqui para ser seu parceiro de confiança em todas as suas necessidades tecnológicas.</p>
+                <p>Possuimos 9 anos de experiência no mercado, dedicados a fornecer serviços de upgrade, manutenção, limpeza, instalação e montagem de computadores, impressoras e notebooks. Desde a nossa fundação, somos comprometidos a oferecer soluções de alta qualidade para nossos clientes, garantindo que seus dispositivos funcionem com a máxima eficiência e desempenho.
+                <p>Estamos sempre atualizados com as últimas tendências e tecnologias do mercado, garantindo que nossos clientes recebam o melhor suporte possível. Venha conhecer a NeoJobs e descubra como podemos ajudar a manter seus computadores em perfeito estado. Estamos aqui para ser seu parceiro de confiança em todas as suas necessidades tecnológicas.</p>
             </div>
         </section>
 
-        <section class="assistencia">
+        <section class="assistencia" id="servico">
             <h1 class="title">Assistência Tecnológica</h1>
 
             <section class="container">
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
                     <h1>Manutenção Preventiva</h1>
                     <p>Proteja seu computador contra falhas ocasionais com nossa manutenção preventiva especializada.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
                     <h1>Assistência Técnica Especializada</h1>
                     <p>Resolvemos problemas complexos com expertise, garantindo que seu sistema funcione com eficiência.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/computador.svg" alt="computador">
                     <h1>Instalação de Softwares e Sistemas</h1>
                     <p>Configure novos programas sem complicações com nosso serviços de instalação profissional.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
                     <h1>Atualização de Hardware e Software</h1>
                     <p>Melhore o desempenho do seu sistema com nossas atualizações de hardware e software.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/computador.svg" alt="computador"> 
                     <h1>Criação e Manutenção de Sites</h1>
                     <p>Desenvolvimento e manutenção de web sites e landing Pages, com preços acessíveis e sites responsivos.</p>
                 </div>
             </section>
+            
+            <a href="https://wa.me/5521998303003?text=Gostaria+de+solicitar+o+servico+de+assistência+técnica">Fale Conosco</a>
         </section>
 
         <section class="manutencao">
@@ -110,53 +104,42 @@
 
             <section class="container">
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
                     <h1>Diagnóstico Abrangente</h1>
                     <p>Utilize ferramentas avançadas para identificar e resolver problemas de hardware e software com eficiência.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
                     <h1>Manutenção Preventiva</h1>
                     <p>Verificações e atualizações regulares do sistema para evitar problemas futuros e garantir o desempenho ideal.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
                     <h1>Backup e Recuperação de Dados</h1>
                     <p>Proteja seus dados valiosos com soluções de backup e serviços de recuperação Confiáveis.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
                     <h1>Suporte Local</h1>
                     <p>Suporte técnico conveniente no local para resolver problemas rapidamente e minimizar o tempo de inatividade.</p>
                 </div>
 
                 <div class="tipo">
-                    <nav class="imagem-assis">
-                       <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
-                    </nav>
-                    
+                    <img src="./assents/imagens/icones/engrenagem.svg" alt="engrenagem"> 
                     <h1>Instalação de Componentes</h1>
                     <p>Encontramos uma solução mais flexível na infraestrutura de TI, para uma melhor organização de computadores e impressoras.</p>
                 </div>
             </section>
+
+            <a href="https://wa.me/5521998303003?text=Gostaria+de+solicitar+o+servico+de+manutenção">Fale Conosco</a>
         </section>
 
         <section class="feedbacks">
+            <h1>Oque Dizem Sobre Nós?</h1>
+
             <section class="container-trocas">
                 <div class="trocas">
                     <img src="./assents/imagens/icones/seta-esquerda.svg" alt="seta" id="se1">
@@ -166,26 +149,31 @@
                 </div>
 
                 <section class="feed" id="one">
+                    <img src="./assents/imagens/feed-imagens/erica.jpg" alt="Erica">
                     <h1>Indico pra todos os meus amigos! Honesto e preço justo, sem enrolação.</h1>
                     <p>- ERICA T.</p>
                 </section>
 
                 <section class="feed" id="two">
+                    <img src="./assents/imagens/feed-imagens/romario.jpg" alt="Romario">
                     <h1>Empresa séria e competente. Dedicação total aos seus clientes, se eu recomendo? Com certeza!.</h1>
                     <p>- ROMARIO N.</p>
                 </section>
 
                 <section class="feed" id="three">
+                    <img src="./assents/imagens/feed-imagens/gabriel.jpg" alt="Gabriel">
                     <h1>Você pede o que precisa e ainda ganha muito mais, um ótimo atendimento. Nesta região não achei ninguém que eu possa confiar a não ser a NeoJobs.</h1>
                     <p>- GABRIEL M.</p>
                 </section>
 
                 <section class="feed" id="four">
+                    <img src="./assents/imagens/feed-imagens/iago.jpg" alt="Iago">
                     <h1>Serviço de confiança, qualidade e que cabe no seu bolso, recomendo 100%.</h1>
                     <p>- IAGO D.</p>
                 </section>
 
                 <section class="feed" id="five">
+                    <img src="./assents/imagens/feed-imagens/cibele.jpg" alt="Cibele">
                     <h1>Recomendo muito! Empresa de muita responsabilidade com os serviços e clientes.</h1>
                     <p>- CIBELE C.</p>
                 </section>
@@ -207,14 +195,6 @@
             </div>
         </section>
 
-        <section class="orcamento">
-            <section class="orcamento-interno">
-                <h1>Mantenha seu sistema funcionando perfeitamente</h1>
-                <p>Confie nos especialistas da Neojobs para garantir o máximo de desempenho e segurança do seu computador. Nossos serviços garantem tranquilidade em Rio de Janeiro e Região.</p>
-                <a href="https://wa.me/5521998303003">Peça um orçamento</a>
-            </section>
-        </section>
-
         <section class="canal">
             <img src="./assents/imagens/leao-(sem fundo).png" class="logo-canal" alt="logo">
             <h1>Quer Receber Dicas e Promoções Sobre o <span>Mundo da Tecnologia?!</span></h1>
@@ -224,26 +204,39 @@
     </main>
 
     <footer>
-        <a href="">
-            <img src="./assents/imagens/img logo com nome (sem fundo).png" alt="logo com nome" class="logo-footer">  
-        </a>
+        <div class="rodape">
+            <div class="rodape-empresa">
+                <a href="#home">
+                    <img src="./assents/imagens/logo-comnome-sem-fundo.png" alt="logo com nome">
+                </a>
+            </div>
+            
+            <span>Atendimentos em Itaboraí, São Gonçalo, Niterói e Rio de Janeiro.</span>
+        </div>
         
+
+        <hr>
+
+        <div class="rodape">
+            <h1>Redes Sociais</h1>
+
+            <div class="redes">
+                <a href="https://wa.me/5521998303003">
+                    <img src="./assents/imagens/icones/whats.png" alt="whatsapp" title="whatsapp">   
+                </a>
+                <a href="https://www.instagram.com/neojobsbr/">
+                    <img src="./assents/imagens/icones/instagram.jpg" alt="instagram" title="instagram">
+                </a>
+                <a href="https://www.facebook.com/neojobsbr/?locale=pt_BR">
+                    <img src="./assents/imagens/icones/face.png" alt="facebook" title="facebook">
+                </a>
+            </div>
+        </div>
+
 
         <div class="copy">
             <p>© Todos os direitos reservados</p>
             <P>2025 - RJ - Brasil</P>
-        </div>
-
-        <div class="redes">
-            <a href="https://wa.me/5521998303003">
-                <img src="./assents/imagens/icones/whats.png" alt="whatsapp" title="whatsapp">   
-            </a>
-            <a href="https://www.instagram.com/neojobsbr/">
-                <img src="./assents/imagens/icones/instagram.jpg" alt="instagram" title="instagram">
-            </a>
-            <a href="https://www.facebook.com/neojobsbr/?locale=pt_BR">
-                <img src="./assents/imagens/icones/face.png" alt="facebook" title="facebook">
-            </a>
         </div>
     </footer>
     
